@@ -17,9 +17,9 @@ function Navbar() {
     ];
 
     return (
-        <nav className='fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border border-gray-200 shadow-sm'>
-            <div className='container mx-auto px-6'>
-                <div className='flex items-center justify-between h-20'>
+        <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border border-gray-200 shadow-sm'>
+            <div className='container mx-auto '>
+                <div className='flex items-center justify-between h-16'>
                     <div className='flex items-center'>
                         <img src="/assets/images/logo.png" alt="Gordillo Arquitectos" width={50}/>
                         <h1 className='text-2xl tracking-tight'><span className='font-semibold'>Gordillo</span> Arquitectos</h1>
