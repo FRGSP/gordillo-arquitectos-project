@@ -34,12 +34,14 @@ function Hero() {
                     {/* Content Section */}
                     <div className='space-y-8'>
                         <div className='space-y-6'>
-                            <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full">
-                                <DollarSign className="w-5 h-5 text-blue-900 mr-1" strokeWidth={2} />
-                                <span className="text-sm font-semibold text-blue-900">Cotizamos al mejor precio</span>
+                            <div className="flex justify-center lg:justify-start">
+                                <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full">
+                                    <DollarSign className="w-5 h-5 text-blue-900 mr-1" strokeWidth={2} />
+                                    <span className="text-sm font-semibold text-blue-900">Cotizamos al mejor precio</span>
+                                </div>
                             </div>
 
-                            <p className="text-5xl text-center sm:text-left sm:text-5xl md:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-900  to-blue-700 bg-clip-text text-transparent">
+                            <p className="text-5xl text-center lg:text-left sm:text-5xl md:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-900  to-blue-700 bg-clip-text text-transparent">
                                 Diseñamos
                                 <span className="block">Construimos</span>
                                 <span className="block">Administramos</span>
