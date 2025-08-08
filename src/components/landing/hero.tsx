@@ -41,13 +41,13 @@ function Hero() {
                                 </div>
                             </div>
 
-                            <p className="text-5xl text-center lg:text-left sm:text-5xl md:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-900  to-blue-700 bg-clip-text text-transparent">
+                            <p className="text-5xl text-center lg:text-left sm:text-5xl md:text-7xl font-bold leading-tight ">
                                 Diseñamos
                                 <span className="block">Construimos</span>
                                 <span className="block">Administramos</span>
                             </p>
 
-                            <p className="text-lg text-muted-foreground leading-relaxed max-w-lg text-center sm:text-left">
+                            <p className="text-lg text-muted-foreground leading-relaxed max-w-lg text-center lg:text-left">
                                 Proyectos arquitectónicos, construcción residencial, bienes raíces, muebles a medida, vidrio, aluminio y mantenimiento especializado: todo en un solo lugar.
                             </p>
                         </div>
