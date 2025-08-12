@@ -2,6 +2,7 @@ import Navbar from "@/components/landing/navbar";
 import Hero from "@/components/landing/hero";
 import Whatsapplink from '@/components/landing/whatsapplink';
 import ServicesGrid from "@/components/landing/services";
+import Process from "@/components/landing/process";
 import Footer from "@/components/landing/footer";
 import Projects from "@/components/landing/projects";
 
@@ -12,8 +13,7 @@ function Landing() {
       <Hero />
       <ServicesGrid />
       <Whatsapplink />
-      <Projects />
-      <ServicesGrid />
+  <Projects />
       <Footer />
     </div>
   )

@@ -1,7 +1,16 @@
 'use client';
+import { useEffect, useState } from 'react';
 import { InstagramLogo, FacebookLogo, WhatsappLogo } from 'phosphor-react';
 
 function Navbar() {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 10);
+        onScroll(); // set initial state in case user reloads scrolled
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     const navItems = [
         { name: "Inicio", href: "/" },
@@ -17,12 +26,19 @@ function Navbar() {
     ];
 
     return (
-        <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border border-gray-200 shadow-sm'>
+        <nav
+            className={[
+                'fixed top-0 left-0 right-0 z-50 transition-colors duration-300',
+                scrolled
+                    ? 'bg-white/95 backdrop-blur-sm border border-gray-200 shadow-sm'
+                    : 'bg-transparent border-transparent'
+            ].join(' ')}
+        >
             <div className='container mx-auto '>
                 <div className='flex items-center justify-between h-16'>
                     <div className='flex items-center'>
                         <img src="/assets/images/logo.png" alt="Gordillo Arquitectos" width={50}/>
-                        <h1 className='text-2xl tracking-tight'><span className='font-semibold'>Gordillo</span> Arquitectos</h1>
+                        <h1 className={`text-2xl tracking-tight ${scrolled ? 'text-black' : 'text-white'}`}><span className='font-semibold'>Gordillo</span> Arquitectos</h1>
                     </div>
 
                     {/* Desktop Navigation */}
@@ -32,13 +48,13 @@ function Navbar() {
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className='text-black hover:text-blue-800 transition-colors duration-300 font-semibold'
+                                    className={`${scrolled ? 'text-black' : 'text-white'} hover:text-blue-800 transition-colors duration-300 font-semibold`}
                                 >
                                     {item.name}
                                 </a>
                             ))}
 
-                            <span className='text-gray-800 font-semibold'>|</span>
+                            <span className={`${scrolled ? 'text-black' : 'text-white'} font-semibold`}>|</span>
                             <div className='flex items-center space-x-4'>
 
                                 {socialLinks.map((link) => (
