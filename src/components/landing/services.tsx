@@ -23,10 +23,12 @@ function ServicesGrid() {
             category: "Proyectos",
             icon: <Building className={`w-8 h-8 ${active === 0 ? 'text-white' : 'text-blue-800'}`} />,
             services: [
-                "Diseño arquitectónico",
-                "Interiores"
+                "Diseño arquitectónico integral",
+                "Planos y renders profesionales",
+                "Asesoria técnica durante todo el proceso"
             ],
-            description: "Diseños que combinan funcionalidad y estética creando espacios únicos.",
+            description: "Planificamos y desarrollamos proyectos arquitectónicos adaptados a tus necesidades, garantizando diseño, funcionalidad y estética en cada detalle.",
+            CTA: "Cotizar tu proyecto",
             gradient: "from-blue-600 to-blue-800"
         },
         {
@@ -39,7 +41,8 @@ function ServicesGrid() {
                 "Talleres de vidrio, aluminio, herrería",
                 "Construcción residencial"
             ],
-            description: "Servicios integrales de construcción con los más altos estándares de calidad.",
+            description: "Ejecutamos obras con los más altos estándares, cuidando cada detalle desde la cimentación hasta la entrega final.",
+            CTA: "Solicitar cotización",
             gradient: "from-blue-600 to-blue-800"
         },
         {
@@ -50,18 +53,20 @@ function ServicesGrid() {
                 "Planificación urbana",
                 "Infraestructura"
             ],
-            description: "Desarrollamos comunidades planificadas con visión moderna y sustentable.",
+            description: "Diseñamos y ejecutamos obras de urbanización que mejoran la conectividad y calidad de vida en cada comunidad.",
+            CTA: "Cotizar Desarrollo",
             gradient: "from-blue-600 to-blue-800"
         },
         {
             category: "Muebles a Medida",
             icon: <Sofa className={`w-8 h-8 ${active === 3 ? 'text-white' : 'text-blue-800'}`} />,
             services: [
+                "Muebles personalizados para hogar y oficina",
                 "Diseño personalizado",
-                "Fabricación artesanal",
                 "Instalación especializada"
             ],
-            description: "Muebles únicos diseñados específicamente para cada espacio y necesidad.",
+            description: "Creamos muebles personalizados que combinan estética, funcionalidad y durabilidad, adaptados a tu estilo de vida.",
+            CTA: "Solicitar cotización",
             gradient: "from-blue-600 to-blue-800"
         },
         {
@@ -72,21 +77,23 @@ function ServicesGrid() {
                 "Administración de propiedades",
                 "Asesoría inmobiliaria"
             ],
-            description: "Servicios inmobiliarios completos con asesoría experta en el mercado.",
+            description: "Asesoría y acompañamiento para comprar, vender o rentar inmuebles con total seguridad y transparencia.",
+            CTA: "Contáctanos para más información",
             gradient: "from-blue-600 to-blue-800"
         },
         {
             category: "Mantenimiento",
             icon: <Settings className={`w-8 h-8 ${active === 5 ? 'text-white' : 'text-blue-800'}`} />,
             services: [
-                "Mantenimiento a edificios",
+                "Reparaciones generales",
                 "Programas mensuales de mantenimiento",
                 "Plomería especializada",
                 "Pintura e impermeabilización",
                 "Herrería y vidrio",
                 "Servicios de mantenimiento programada"
             ],
-            description: "Mantenimiento preventivo y correctivo para preservar el valor de su propiedad.",
+            description: "Servicios de mantenimiento preventivo y correctivo para prolongar la vida útil de tus construcciones.",
+            CTA: "Solicitar servicio",
             gradient: "from-blue-600 to-blue-800"
         }
     ];
@@ -208,7 +215,7 @@ function ServicesGrid() {
                                                         rel='noopener noreferrer'
                                                         className='inline-flex items-center justify-center rounded-lg bg-blue-800 px-5 py-3 text-white font-semibold shadow-md hover:bg-blue-700 transition-colors'
                                                     >
-                                                        Cotizar este servicio
+                                                        {s.CTA}
                                                         <ArrowRight className='ml-2 h-5 w-5' />
                                                     </a>
                                                     <a

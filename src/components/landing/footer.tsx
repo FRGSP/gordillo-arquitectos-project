@@ -4,9 +4,9 @@ import { InstagramLogo, FacebookLogo, WhatsappLogo } from 'phosphor-react';
 function Footer() {
 
     const socialLinks = [
-        { name: "Facebook", href: "https://www.facebook.com/gordilloarquitectos", img: <FacebookLogo size={32} className='transition-transform hover:scale-110 text-black hover:text-blue-800 duration-300'/> },
-        { name: "Instagram", href: "https://www.instagram.com/gordilloarquitectos", img: <InstagramLogo size={32} className='transition-transform hover:scale-110 text-black hover:text-pink-700 duration-300'/> },
-        { name: "WhatsApp", href: "https://wa.me/1234567890", img: <WhatsappLogo size={32} className='transition-transform hover:scale-110 text-black hover:text-[#25D366] duration-300'/> },
+        { name: "Facebook", href: "https://www.facebook.com/gordilloarquitectos", img: <FacebookLogo size={32} className={`transition-transform hover:scale-110 text-black hover:text-[#1877f2] duration-300`} /> },
+        { name: "Instagram", href: "https://www.instagram.com/gordilloarquitectos", img: <InstagramLogo size={32} className={`transition-transform hover:scale-110 text-black hover:text-[#D43089] duration-300`} /> },
+        { name: "WhatsApp", href: "https://wa.me/1234567890", img: <WhatsappLogo size={32} className={`transition-transform hover:scale-110 text-black hover:text-[#25D366] duration-300`} /> },
     ];
 
   return (
