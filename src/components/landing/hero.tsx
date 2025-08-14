@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 
 function Hero() {
     return (
-        <section className="relative min-h-screen md:min-h-screen flex items-center pt-16">
+        <section className="relative min-h-screen flex items-center">
             {/* Background image */}
                     <Image
                         src="/assets/images/pipila.webp"
@@ -16,7 +16,7 @@ function Hero() {
                         className="object-cover md:object-top"
                     />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/35 md:bg-gradient-to-r md:from-black/70 md:to-black/20" />
+            <div className="absolute inset-0 bg-black/65 md:bg-gradient-to-r md:from-black/70 md:to-black/20" />
 
             {/* Content */}
             <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +47,7 @@ function Hero() {
                         </a>
                     </div>
 
-                    <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-xl text-white/90 mx-auto text-center">
+                    <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-6 max-w-xl text-white/90 mx-auto text-center">
                         <div>
                             <p className="text-2xl md:text-3xl font-bold">+30</p>
                             <p className="text-sm">Años de experiencia</p>
@@ -56,7 +56,7 @@ function Hero() {
                             <p className="text-2xl md:text-3xl font-bold">+100</p>
                             <p className="text-sm">Proyectos realizados</p>
                         </div>
-                        <div>
+                        <div className="hidden md:block">
                             <p className="text-2xl md:text-3xl font-bold">360°</p>
                             <p className="text-sm">Servicios integrales</p>
                         </div>
@@ -65,7 +65,7 @@ function Hero() {
             </div>
 
             {/* Scroll hint */}
-            <div className="pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 text-sm flex items-center gap-3">
+            <div className="hidden pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 text-sm md:flex items-center gap-3">
                 <span className="hidden sm:inline">Desplaza para ver más</span>
                 <div className="h-7 w-4 rounded-full border border-white/50 relative">
                     <span className="absolute left-1/2 -translate-x-1/2 top-1 h-2 w-1 rounded-full bg-white/90 animate-bounce" />
