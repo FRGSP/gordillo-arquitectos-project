@@ -106,7 +106,7 @@ function MasonryGrid() {
     };
 
     return (
-        <section>
+        <section className=''>
             <div className={`p-3 relative container mx-auto ${!isExpanded ? 'max-h-[250vh] md:max-h-[80vh] overflow-y-hidden' : 'max-h-none'}`}>
                 <div className='columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4'>
                     {images.map((image) => (
