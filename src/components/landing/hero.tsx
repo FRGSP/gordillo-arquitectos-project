@@ -16,12 +16,12 @@ function Hero() {
                         className="object-cover md:object-top"
                     />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/65 md:bg-gradient-to-r md:from-black/70 md:to-black/20" />
+            <div className="absolute inset-0 bg-black/65 " />
 
             {/* Content */}
             <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto text-center">
-                    <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white">
+                    <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white text-shadow-lg/20">
                         Diseñamos y construimos espacios que inspiran
                     </h1>
                     <p className="mt-4 md:mt-6 text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto">

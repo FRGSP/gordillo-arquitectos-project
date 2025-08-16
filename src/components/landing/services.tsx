@@ -11,8 +11,6 @@ import {
     Users,
     Check,
     ArrowRight,
-    ChevronLeft,
-    ChevronRight,
     type LucideIcon,
 } from "lucide-react"
 
@@ -144,7 +142,7 @@ function Services() {
                                 Ofrecemos servicios integrales de arquitectura y diseño de alta calidad, adaptados a cada proyecto para transformar sus ideas en espacios únicos y funcionales.
                             </p>
                         </div>
-                        <ul>
+                        <ul className="hidden md:block">
                             {services.map((service) => (
                                 <li key={service.index} className={`py-4 border-b ${serviceSelected === service.index ? 'border-gray-400' : 'border-gray-300 cursor-pointer'} group`} onClick={() => handleServiceClick(service.index)}>
                                     <div className='flex items-center space-x-3'>
@@ -157,7 +155,7 @@ function Services() {
                     </div>
 
                     {/* Right Section */}
-                    <div className="md:col-span-2 flex flex-col space-y-6">
+                    <div className="md:col-span-2 md:flex flex-col space-y-6 hidden">
                         <div className="w-full aspect-[16/6] relative rounded-lg overflow-hidden">
                             <Image
                                 src={services[serviceSelected].bg}
@@ -190,8 +188,9 @@ function Services() {
                             </a>
                         </div>
                     </div>
-
                 </div>
+                {/* Mobile Service Cards */}
+                
             </div>
         </section>
     )
