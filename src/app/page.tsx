@@ -5,6 +5,7 @@ import ServicesGrid from "@/components/landing/services";
 import Process from "@/components/landing/process";
 import Footer from "@/components/landing/footer";
 import Projects from "@/components/landing/projects";
+import ServicesGrid2 from "@/components/landing/servicesGrid";
 
 function Landing() {
   return (

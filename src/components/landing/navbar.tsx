@@ -76,9 +76,9 @@ function Navbar() {
       >
         <div className="container mx-auto">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img src="/assets/images/logo.png" alt="Gordillo Arquitectos" width={50} />
-              <h1 className={`text-2xl tracking-tight ${scrolled || menuOpen ? 'text-black' : 'text-white'}`}>
+              <h1 className={`text-2xl tracking-tight ${scrolled ? 'text-black' : 'text-white'}`}>
                 <span className="font-semibold">Gordillo</span> Arquitectos
               </h1>
             </div>
@@ -135,10 +135,10 @@ function Navbar() {
         >
           <div className="flex flex-col h-full">
             {/* Drawer header */}
-            <div className="flex items-center justify-between px-6 h-16 border-b border-gray-200">
-              <div className="flex items-center gap-3">
+            <div className="flex items-center justify-between px-1 h-16 border-b border-gray-200">
+              <div className="flex items-center">
                 <img src="/assets/images/logo.png" alt="Gordillo Arquitectos" width={50} height={50} />
-                <span className="text-xl font-semibold text-gray-900">Gordillo Arquitectos</span>
+                <p className='text-2xl'><span className="font-semibold">Gordillo</span> Arquitectos</p>
               </div>
               <button
                 aria-label="Cerrar menú"

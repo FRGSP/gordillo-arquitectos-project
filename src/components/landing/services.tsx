@@ -9,191 +9,177 @@ import {
     Key,
     Settings,
     Users,
-    Check,
-    ArrowRight,
-    type LucideIcon,
+
 } from "lucide-react"
 
-function Services() {
+function ServicesGrid() {
 
-    const [serviceSelected, setServiceSelected] = useState(0);
+    const [active, setActive] = useState(0)
+    const whatsappBase = "https://wa.me/4454503606"
 
-    type Service = {
-        index: number
-        category: string
-        Icon: LucideIcon
-        items: string[]
-        description: string
-        CTA: string
-        gradient?: string
-        bg: string
-    }
-
-    const services: Service[] = [
+    const services = [
         {
-            index: 0,
             category: "Proyectos",
-            Icon: Building,
-            items: [
+            icon: Building,
+            services: [
                 "Diseño arquitectónico integral",
                 "Planos y renders profesionales",
-                "Asesoría técnica durante todo el proceso",
+                "Asesoria técnica durante todo el proceso"
             ],
-            description:
-                "Planificamos y desarrollamos proyectos arquitectónicos adaptados a tus necesidades, garantizando diseño, funcionalidad y estética en cada detalle.",
+            description: "Planificamos y desarrollamos proyectos arquitectónicos adaptados a tus necesidades, garantizando diseño, funcionalidad y estética en cada detalle.",
             CTA: "Cotizar tu proyecto",
             gradient: "from-blue-600 to-blue-800",
-            bg: "/assets/images/proyectos.jpg",
+            bg: "/assets/images/proyectos.jpg"
         },
         {
-            index: 1,
             category: "Construcción",
-            Icon: Construction,
-            items: [
+            icon: Construction,
+            services: [
                 "Construcción en general",
                 "Nueva construcción",
                 "Remodelaciones",
                 "Talleres de vidrio, aluminio, herrería",
-                "Construcción residencial",
+                "Construcción residencial"
             ],
-            description:
-                "Ejecutamos obras con los más altos estándares, cuidando cada detalle desde la cimentación hasta la entrega final.",
+            description: "Ejecutamos obras con los más altos estándares, cuidando cada detalle desde la cimentación hasta la entrega final.",
             CTA: "Solicitar cotización",
             gradient: "from-blue-600 to-blue-800",
-            bg: "/assets/images/Construccion.jpg",
+            bg: "/assets/images/Construccion.jpg"
         },
         {
-            index: 2,
             category: "Urbanizaciones",
-            Icon: Users,
-            items: [
+            icon: Users,
+            services: [
                 "Diseño y construcción de fraccionamientos",
                 "Planificación urbana",
-                "Infraestructura",
+                "Infraestructura"
             ],
-            description:
-                "Diseñamos y ejecutamos obras de urbanización que mejoran la conectividad y calidad de vida en cada comunidad.",
-            CTA: "Cotizar desarrollo",
+            description: "Diseñamos y ejecutamos obras de urbanización que mejoran la conectividad y calidad de vida en cada comunidad.",
+            CTA: "Cotizar Desarrollo",
             gradient: "from-blue-600 to-blue-800",
-            bg: "/assets/images/urbanizacion.jpg",
+            bg: "/assets/images/urbanizacion.jpg"
         },
         {
-            index: 3,
             category: "Muebles a Medida",
-            Icon: Sofa,
-            items: [
+            icon: Sofa,
+            services: [
                 "Muebles personalizados para hogar y oficina",
                 "Diseño personalizado",
-                "Instalación especializada",
+                "Instalación especializada"
             ],
-            description:
-                "Creamos muebles personalizados que combinan estética, funcionalidad y durabilidad, adaptados a tu estilo de vida.",
+            description: "Creamos muebles personalizados que combinan estética, funcionalidad y durabilidad, adaptados a tu estilo de vida.",
             CTA: "Solicitar cotización",
             gradient: "from-blue-600 to-blue-800",
-            bg: "/assets/images/muebles.jpg",
+            bg: "/assets/images/muebles.jpg"
         },
         {
-            index: 4,
             category: "Bienes Raíces",
-            Icon: Key,
-            items: [
-                "Compra-venta",
+            icon: Key,
+            services: [
+                "Compra venta",
                 "Administración de propiedades",
-                "Asesoría inmobiliaria",
+                "Asesoría inmobiliaria"
             ],
-            description:
-                "Asesoría y acompañamiento para comprar, vender o rentar inmuebles con total seguridad y transparencia.",
+            description: "Asesoría y acompañamiento para comprar, vender o rentar inmuebles con total seguridad y transparencia.",
             CTA: "Más información",
             gradient: "from-blue-600 to-blue-800",
-            bg: "/assets/images/interiorPipila.jpg",
+            bg: "/assets/images/interiorPipila.jpg"
         },
         {
-            index: 5,
             category: "Mantenimiento",
-            Icon: Settings,
-            items: [
+            icon: Settings,
+            services: [
                 "Reparaciones generales",
-                "Programas de mantenimiento",
-                "Plomería, pintura e impermeabilización",
+                "Programas mensuales de mantenimiento",
+                "Plomería especializada",
+                "Pintura e impermeabilización",
+                "Herrería y vidrio",
+                "Servicios de mantenimiento programados"
             ],
-            description:
-                "Mantenimiento preventivo y correctivo para prolongar la vida útil de tus construcciones.",
+            description: "Servicios de mantenimiento preventivo y correctivo para prolongar la vida útil de tus construcciones.",
             CTA: "Solicitar servicio",
             gradient: "from-blue-600 to-blue-800",
-            bg: "/assets/images/image.png",
-        },
-    ]
-
-    const handleServiceClick = (index: number) => {
-        setServiceSelected(index);
-    }
+            bg: "/assets/images/image.png"
+        }
+    ];
 
     return (
-        <section className='py-24 px-4 sm-px-6 lg:px-8 bg-gray-50'>
-            <div className='max-w-7xl mx-auto'>
-                <div className='w-full grid md:grid-cols-3 gap-6'>
-                    {/* Left Section */}
-                    <div className='md:col-span-1'>
-                        <div className="text-center md:text-start mb-5">
-                            <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>
-                                Nuestros Servicios
-                            </h2>
-                            <p>
-                                Ofrecemos servicios integrales de arquitectura y diseño de alta calidad, adaptados a cada proyecto para transformar sus ideas en espacios únicos y funcionales.
-                            </p>
-                        </div>
-                        <ul className="hidden md:block">
-                            {services.map((service) => (
-                                <li key={service.index} className={`py-4 border-b ${serviceSelected === service.index ? 'border-gray-400' : 'border-gray-300 cursor-pointer'} group`} onClick={() => handleServiceClick(service.index)}>
-                                    <div className='flex items-center space-x-3'>
-                                        <service.Icon className={`text-lg ${serviceSelected === service.index ? 'text-blue-800' : 'text-gray-400 group-hover:text-black'}`} />
-                                        <h3 className={`text-lg font-semibold ${serviceSelected === service.index ? 'text-blue' : 'text-gray-400 group-hover:text-black'}`}>{service.category}</h3>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Right Section */}
-                    <div className="md:col-span-2 md:flex flex-col space-y-6 hidden">
-                        <div className="w-full aspect-[16/6] relative rounded-lg overflow-hidden">
-                            <Image
-                                src={services[serviceSelected].bg}
-                                alt={services[serviceSelected].category}
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-
-                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">{services[serviceSelected].category}</h3>
-
-                        <p className="text-lg text-gray-700 leading-relaxed">{services[serviceSelected].description}</p>
-
-                        <ul className="mt-2 space-y-2">
-                            {services[serviceSelected].items.slice(0, 3).map((item, idx) => (
-                                <li key={idx} className="flex items-start space-x-3 text-gray-700">
-                                    <Check className="mt-1 text-blue-800 flex-shrink-0" size={16} />
-                                    <span>{item}</span>
-                                </li>
-                            ))}
-                        </ul>
-
-                        <div className="mt-4">
-                            <a
-                                href="#contact"
-                                className={`inline-flex items-center px-5 py-3 rounded-md text-white font-semibold shadow-sm transition duration-200 hover:scale-105 ${services[serviceSelected].gradient ? `bg-gradient-to-r ${services[serviceSelected].gradient}` : 'bg-blue-600'} hover:opacity-95`}
-                                aria-label={`${services[serviceSelected].CTA} - ${services[serviceSelected].category}`}>
-                                <span>{services[serviceSelected].CTA}</span>
-                                <ArrowRight className="ml-3" size={16} />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {/* Mobile Service Cards */}
-                
+        <section id="services" className='scroll-mt-20 bg-gray-50'>
+            {/* Header */}
+            <div className='container mx-auto px-4 sm:px-6 lg:px-8 pt-14 md:pt-20 pb-6 text-center'>
+                <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">Servicios que impulsan tus proyectos</h2>
             </div>
+
+            {/* Mobile version */}
+            <div className="px-4 sm:px-6 lg:px-8 bg-gray-50">
+                <div className='container mx-auto'>
+                    {/* Section Header */}
+                    <div className='text-center mb-16'>
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                            Descubre nuestra amplia gama de servicios profesionales diseñados para cubrir
+                            todas sus necesidades de construcción y diseño.
+                        </p>
+                    </div>
+
+                    {/* Services Grid */}
+                    <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                        {services.map((service, index) => (
+                            <div
+                                key={index}
+                                className='bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full'
+                            >
+                                {/* Card Header: use responsive aspect-ratio instead of fixed heights for better responsiveness */}
+                                <div className="relative aspect-video md:aspect-[16/8]">
+                                    <Image
+                                        src={service.bg}
+                                        alt={service.category}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                                    <div className="absolute bottom-3 left-3 flex items-center space-x-2">
+                                        <service.icon className={`w-8 h-8 text-white`} />
+                                        <h3 className="text-2xl font-bold text-white tracking-wide">
+                                            {service.category}
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                {/* Card Body */}
+                                <div className='p-6 flex flex-col justify-between flex-1'>
+                                    <div className="">
+                                        <p className="text-gray-600 text-base md:text-lg mb-5 leading-relaxed">
+                                            {service.description}
+                                        </p>
+                                        <ul className='space-y-3'>
+                                            {service.services.map((item, itemIndex) => (
+                                                <li key={itemIndex} className='flex items-start space-x-3'>
+                                                    <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.gradient} mt-2 flex-shrink-0`}></div>
+                                                    <span className='text-gray-700 font-medium'>{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {/* Call to Action */}
+                                    <div className='mt-auto pt-6 border-t border-gray-100'>
+                                        <button className={`w-full bg-gradient-to-r ${service.gradient} text-white font-semibold py-3 px-6 rounded-xl uppercase tracking-wide transition duration-200 ease-in-out hover:scale-105 cursor-pointer`} onClick={() => { console.log(`Solicitar información para ${service.category}`) }}>
+                                            {service.CTA}
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Contact Section */}
+
+                </div>
+            </div>
+
         </section>
     )
 }
 
-export default Services
+export default ServicesGrid

@@ -16,7 +16,7 @@ function Hero() {
                         className="object-cover md:object-top"
                     />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/65 " />
+            <div className="absolute inset-0 bg-black/60 " />
 
             {/* Content */}
             <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
