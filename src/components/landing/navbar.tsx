@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { InstagramLogo, FacebookLogo, WhatsappLogo, List, X } from 'phosphor-react';
+import LinkUnderline from '../elements/linkUnderline';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -87,13 +88,9 @@ function Navbar() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-center space-x-8">
                 {navItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className={`${scrolled || menuOpen ? 'text-black' : 'text-white'} hover:text-blue-800 transition-colors duration-300 font-semibold`}
-                  >
+                  <LinkUnderline key={item.name} href={item.href} scrolledProp={scrolled || menuOpen}>
                     {item.name}
-                  </a>
+                  </LinkUnderline>
                 ))}
                 <span className={`${scrolled || menuOpen ? 'text-black' : 'text-white'} font-semibold`}>|</span>
                 <div className="flex items-center space-x-4">

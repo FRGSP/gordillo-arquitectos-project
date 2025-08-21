@@ -47,7 +47,7 @@ function ServicesGrid() {
             bg: "/assets/images/Construccion.jpg"
         },
         {
-            category: "Urbanizaciones",
+            category: "Urbanización",
             icon: Users,
             services: [
                 "Diseño y construcción de fraccionamientos",
@@ -73,15 +73,15 @@ function ServicesGrid() {
             bg: "/assets/images/muebles.jpg"
         },
         {
-            category: "Bienes Raíces",
+            category: "Inmobiliaria",
             icon: Key,
             services: [
-                "Compra venta",
-                "Administración de propiedades",
-                "Asesoría inmobiliaria"
+                "Compra, venta y renta de propiedades",
+                "Gestión y administración de inmuebles",
+                "Promoción y valuación profesional"
             ],
-            description: "Asesoría y acompañamiento para comprar, vender o rentar inmuebles con total seguridad y transparencia.",
-            CTA: "Más información",
+            description: "Compra, venta y renta de propiedades. Te ayudamos a vender tu inmueble con promoción efectiva y asesoría personalizada.",
+            CTA: "Ver propiedades",
             gradient: "from-blue-600 to-blue-800",
             bg: "/assets/images/interiorPipila.jpg"
         },
@@ -90,8 +90,6 @@ function ServicesGrid() {
             icon: Settings,
             services: [
                 "Reparaciones generales",
-                "Programas mensuales de mantenimiento",
-                "Plomería especializada",
                 "Pintura e impermeabilización",
                 "Herrería y vidrio",
                 "Servicios de mantenimiento programados"
@@ -162,8 +160,8 @@ function ServicesGrid() {
                                     </div>
 
                                     {/* Call to Action */}
-                                    <div className='mt-auto pt-6 border-t border-gray-100'>
-                                        <button className={`w-full bg-gradient-to-r ${service.gradient} text-white font-semibold py-3 px-6 rounded-xl uppercase tracking-wide transition duration-200 ease-in-out hover:scale-105 cursor-pointer`} onClick={() => { console.log(`Solicitar información para ${service.category}`) }}>
+                                    <div className='mt-2 pt-6 border-t border-gray-100'>
+                                        <button className={`w-full bg-gradient-to-r ${service.gradient} text-white font-semibold py-3 px-6 rounded-xl tracking-wide transition duration-200 ease-in-out hover:scale-105 cursor-pointer`} onClick={() => { console.log(`Solicitar información para ${service.category}`) }}>
                                             {service.CTA}
                                         </button>
                                     </div>
