@@ -77,9 +77,9 @@ function Navbar() {
       >
         <div className="container mx-auto">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <img src="/assets/images/logo.png" alt="Gordillo Arquitectos" width={50} />
-              <h1 className={`text-2xl tracking-tight ${scrolled ? 'text-black' : 'text-white'}`}>
+            <div className="flex items-center ml-3 md:ml-0">
+              <img src={`/assets/images/${scrolled ? 'blackLogo.webp' : 'whiteLogo.webp'}`} alt="Gordillo Arquitectos" width={25} />
+              <h1 className={`ml-2 text-2xl tracking-tight ${scrolled ? 'text-black' : 'text-white'}`}>
                 <span className="font-semibold">Gordillo</span> Arquitectos
               </h1>
             </div>
@@ -133,9 +133,9 @@ function Navbar() {
           <div className="flex flex-col h-full">
             {/* Drawer header */}
             <div className="flex items-center justify-between px-1 h-16 border-b border-gray-200">
-              <div className="flex items-center">
-                <img src="/assets/images/logo.png" alt="Gordillo Arquitectos" width={50} height={50} />
-                <p className='text-2xl'><span className="font-semibold">Gordillo</span> Arquitectos</p>
+              <div className="flex items-center ml-3">
+                <img src="/assets/images/blackLogo.webp" alt="Gordillo Arquitectos" width={25} height={25} />
+                <p className='ml-2 text-2xl'><span className="font-semibold">Gordillo</span> Arquitectos</p>
               </div>
               <button
                 aria-label="Cerrar menú"

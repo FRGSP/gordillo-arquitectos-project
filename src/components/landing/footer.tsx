@@ -34,13 +34,13 @@ function Footer() {
                     <div>
                         <div className="flex justify-center md:justify-start items-center mb-4">
                             <img
-                                src="/assets/images/logo.png"
+                                src="/assets/images/blackLogo.webp"
                                 alt="Gordillo Arquitectos"
-                                width={50}
-                                height={50}
+                                width={25}
+                                height={25}
                                 loading="lazy"
                             />
-                            <p className="text-2xl font-semibold">
+                            <p className="ml-2 text-2xl font-semibold">
                                 Gordillo <span className="font-normal">Arquitectos</span>
                             </p>
                         </div>

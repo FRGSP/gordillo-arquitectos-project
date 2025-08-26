@@ -6,6 +6,7 @@ import Process from "@/components/landing/process";
 import Footer from "@/components/landing/footer";
 import Projects from "@/components/landing/projects";
 import ServicesGrid2 from "@/components/landing/servicesGrid";
+import ContactImage from "@/components/landing/contactImage";
 
 function Landing() {
   return (
@@ -14,7 +15,8 @@ function Landing() {
       <Hero />
       <ServicesGrid />
       <Whatsapplink />
-  <Projects />
+      <Projects />
+      <ContactImage />
       <Footer />
     </div>
   )
